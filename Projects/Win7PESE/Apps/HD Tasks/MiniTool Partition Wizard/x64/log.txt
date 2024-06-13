@@ -1,0 +1,268 @@
+=====================================================================================
+2020-08-19 23:55:17:421 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-19 23:55:17:421 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-19 23:55:17:421 => [                                                    main.cpp, 00063] => Software is 64 bit:No
+2020-08-19 23:55:17:421 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-19 23:55:17:421 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-19 23:55:17:421 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2020-08-19 23:55:17:436 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2020-08-19 23:55:17:561 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-19 23:55:17:718 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-19 23:55:17:718 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-19 23:55:18:186 => [                                          kvolumemanager.cpp, 00227] => Disk2, TO Exter nal USB 3.0 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-19 23:55:18:436 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-19 23:55:18:499 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-19 23:55:18:499 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-19 23:55:18:499 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-20 00:03:29:359 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-20 00:03:29:359 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-20 00:03:29:359 => [                                                    main.cpp, 00063] => Software is 64 bit:No
+2020-08-20 00:03:29:359 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-20 00:03:29:359 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-20 00:03:29:359 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2020-08-20 00:03:29:390 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2020-08-20 00:03:29:656 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 00:03:29:828 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 00:03:29:828 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 00:03:30:296 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 00:03:31:046 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 00:03:31:109 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 00:03:31:109 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 00:03:31:109 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+2020-08-20 00:07:46:439 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 00:07:46:595 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 00:07:46:627 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 00:07:47:033 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 00:07:47:783 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 00:07:47:845 => [                                             dynamicdisk.cpp, 00268] => Invalid private header in DiskGroup[].
+2020-08-20 00:07:47:861 => [                                             dynamicdisk.cpp, 00268] => Invalid private header in DiskGroup[].
+2020-08-20 00:07:47:861 => [                                             dynamicdisk.cpp, 00268] => Invalid private header in DiskGroup[].
+2020-08-20 00:07:48:472 => [                                            kfullscandlg.cpp, 00236] => Scan started at:00:07:48
+2020-08-20 00:08:03:831 => [                                            kfullscandlg.cpp, 00258] => Scan finished at:00:08:03
+=====================================================================================
+2020-08-20 08:24:06:629 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-20 08:24:06:629 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-20 08:24:06:629 => [                                                    main.cpp, 00063] => Software is 64 bit:No
+2020-08-20 08:24:06:629 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-20 08:24:06:629 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-20 08:24:06:629 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2020-08-20 08:24:06:645 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2020-08-20 08:24:06:910 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 08:24:07:098 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 08:24:07:098 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 08:24:07:567 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 08:24:08:285 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 08:24:08:348 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 08:24:08:348 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 08:24:08:348 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+2020-08-20 08:24:32:558 => [                                  kbatchcommandexecutive.cpp, 01415] => ChangePartitionID DiskIndex:2 PartitionIndex:2 NewPartitionID:7 NewTypeId=0~0~0~0
+2020-08-20 08:24:32:558 => [                                                 kvolume.cpp, 00481] => Locking volume...
+2020-08-20 08:24:32:558 => [                                                 kvolume.cpp, 00486] => Succeed to lock volume.
+2020-08-20 08:24:32:558 => [                                                 kvolume.cpp, 00501] => Dismounting volume...
+2020-08-20 08:24:32:574 => [                                                 kvolume.cpp, 00506] => Succeed to dismount volume.
+2020-08-20 08:24:33:199 => [                                  kbatchcommandexecutive.cpp, 01415] => FormatPartition DiskIndex:2 PartitionIndex:2 FsType:7 ClusterSize:4 Label:"DATA"
+2020-08-20 08:24:33:293 => [                                                 kvolume.cpp, 00481] => Locking volume...
+2020-08-20 08:24:33:293 => [                                                 kvolume.cpp, 00486] => Succeed to lock volume.
+2020-08-20 08:24:33:293 => [                                                 kvolume.cpp, 00501] => Dismounting volume...
+2020-08-20 08:24:33:293 => [                                                 kvolume.cpp, 00506] => Succeed to dismount volume.
+2020-08-20 08:24:37:792 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 08:24:37:949 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 08:24:37:964 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 08:24:38:386 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 08:24:38:933 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 08:24:38:996 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 08:24:38:996 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 08:24:38:996 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+2020-08-20 08:24:56:602 => [                                  kbatchcommandexecutive.cpp, 01415] => FormatPartition DiskIndex:2 PartitionIndex:2 FsType:11 ClusterSize:8 Label:"DATA"
+2020-08-20 08:24:58:602 => [                                                 kvolume.cpp, 00481] => Locking volume...
+2020-08-20 08:24:59:227 => [                                                 kvolume.cpp, 00486] => Succeed to lock volume.
+2020-08-20 08:24:59:227 => [                                                 kvolume.cpp, 00501] => Dismounting volume...
+2020-08-20 08:24:59:227 => [                                                 kvolume.cpp, 00506] => Succeed to dismount volume.
+2020-08-20 08:25:00:586 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 08:25:00:758 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 08:25:00:773 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 08:25:01:180 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 08:25:01:930 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 08:25:01:977 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 08:25:01:977 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 08:25:01:977 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+2020-08-20 08:25:34:869 => [                                  kbatchcommandexecutive.cpp, 01415] => HidePartition DiskIndex:2 PartitionIndex:2 Unhide:0
+2020-08-20 08:25:34:979 => [                                                 kvolume.cpp, 00481] => Locking volume...
+2020-08-20 08:25:35:010 => [                                                 kvolume.cpp, 00486] => Succeed to lock volume.
+2020-08-20 08:25:35:010 => [                                                 kvolume.cpp, 00501] => Dismounting volume...
+2020-08-20 08:25:35:010 => [                                                 kvolume.cpp, 00506] => Succeed to dismount volume.
+2020-08-20 08:25:35:822 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 08:25:35:979 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 08:25:35:994 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 08:25:36:400 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 08:25:37:150 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 08:25:37:213 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 08:25:37:213 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 08:25:37:213 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+2020-08-20 08:26:27:786 => [                                  kbatchcommandexecutive.cpp, 01415] => HidePartition DiskIndex:2 PartitionIndex:2 Unhide:1
+2020-08-20 08:26:27:802 => [                                                 kvolume.cpp, 00481] => Locking volume...
+2020-08-20 08:26:27:802 => [                                                 kvolume.cpp, 00486] => Succeed to lock volume.
+2020-08-20 08:26:27:802 => [                                                 kvolume.cpp, 00501] => Dismounting volume...
+2020-08-20 08:26:27:802 => [                                                 kvolume.cpp, 00506] => Succeed to dismount volume.
+2020-08-20 08:26:28:489 => [                                  kbatchcommandexecutive.cpp, 01415] => MountPartition DiskIndex:2 PartitionIndex:2 letter:71
+2020-08-20 08:26:28:927 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 08:26:29:083 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 08:26:29:083 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 08:26:29:505 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-20 08:26:30:255 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 08:26:30:317 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 08:26:30:317 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 08:26:30:317 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-20 12:31:09:892 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-20 12:31:09:892 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-20 12:31:09:892 => [                                                    main.cpp, 00063] => Software is 64 bit:No
+2020-08-20 12:31:09:892 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-20 12:31:09:892 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-20 12:31:09:892 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-20 12:31:09:907 => [                                                 idriver.cpp, 00575] => Failed to call myWow64DisableWow64FsRedirection()
+2020-08-20 12:31:09:907 => [                                                 idriver.cpp, 00618] => Copying 32 bit driver.
+2020-08-20 12:31:09:907 => [                                                 idriver.cpp, 00636] => Failed to copy file :F:\Windows PE\Win10XPE\Projects\MyPlugins\Apps\HD Tasks\MiniTool Partition Wizard 12\x86\pwdrvio.sys.
+2020-08-20 12:31:09:907 => [                                                 idriver.cpp, 00643] => Failed to call myWow64RevertWow64FsRedirection()
+2020-08-20 12:31:10:017 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 12:31:10:188 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-20 12:31:10:188 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-20 12:31:10:610 => [                                          kvolumemanager.cpp, 00227] => Disk2, TO Exter nal USB 3.0 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-20 12:31:10:845 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-20 12:31:10:907 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-20 12:31:10:907 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-20 12:31:10:907 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-27 14:50:39:990 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-27 14:50:39:990 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-27 14:50:39:990 => [                                                    main.cpp, 00063] => Software is 64 bit:No
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00636] => Failed to copy file :X:\Program Files\MiniTool Partition Wizard 12\x64\pwdspio.sys.
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00408] => StartService failure! Error = 2 
+
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00477] => ControlService failed!  Error = 1062 
+
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00175] => CreateService failed!  Error = 1072
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00636] => Failed to copy file :X:\Program Files\MiniTool Partition Wizard 12\x64\pwdrvio.sys.
+2020-08-27 14:50:39:990 => [                                                 idriver.cpp, 00408] => StartService failure! Error = 2 
+
+2020-08-27 14:50:40:005 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2020-08-27 14:50:40:005 => [                                                 idriver.cpp, 00477] => ControlService failed!  Error = 1062 
+
+2020-08-27 14:50:40:005 => [                                                 idriver.cpp, 00175] => CreateService failed!  Error = 1072
+2020-08-27 14:50:40:005 => [                                                 idriver.cpp, 00710] => Failed to call ManageDriver(DRIVER_FUNC_INSTALL)
+=====================================================================================
+2020-08-27 14:58:13:515 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-27 14:58:13:515 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-27 14:58:13:515 => [                                                    main.cpp, 00063] => Software is 64 bit:Yes
+2020-08-27 14:58:13:515 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 14:58:13:530 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 14:58:13:640 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 14:58:13:796 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-27 14:58:13:796 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-27 14:58:14:233 => [                                          kvolumemanager.cpp, 00227] => Disk2, TO Exter nal USB 3.0 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 14:58:14:483 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-27 14:58:14:530 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-27 14:58:14:530 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-27 14:58:14:530 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-27 08:04:31:333 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-27 08:04:31:333 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-27 08:04:31:333 => [                                                    main.cpp, 00063] => Software is 64 bit:Yes
+2020-08-27 08:04:31:333 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 08:04:31:442 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 08:04:31:474 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2020-08-27 08:04:31:474 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2020-08-27 08:04:31:474 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2020-08-27 08:04:31:474 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2020-08-27 08:04:37:293 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 08:04:37:413 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-27 08:04:37:413 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-27 08:04:37:853 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-27 08:04:38:336 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-27 08:04:38:643 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-27 08:04:38:643 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-27 08:04:38:643 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-27 15:11:20:810 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-27 15:11:20:810 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-27 15:11:20:810 => [                                                    main.cpp, 00063] => Software is 64 bit:Yes
+2020-08-27 15:11:20:810 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 15:11:20:826 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 15:11:20:826 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2020-08-27 15:11:20:826 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2020-08-27 15:11:20:826 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2020-08-27 15:11:20:826 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2020-08-27 15:11:21:107 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 15:11:21:247 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-27 15:11:21:263 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-27 15:11:21:732 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-27 15:11:22:497 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-27 15:11:22:576 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-27 15:11:22:576 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-27 15:11:22:576 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-27 15:12:04:902 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-27 15:12:04:902 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-27 15:12:04:902 => [                                                    main.cpp, 00063] => Software is 64 bit:Yes
+2020-08-27 15:12:04:902 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 15:12:04:918 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 15:12:04:918 => [                                                 idriver.cpp, 00636] => Failed to copy file :.
+2020-08-27 15:12:05:043 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 15:12:05:184 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-27 15:12:05:199 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-27 15:12:05:621 => [                                          kvolumemanager.cpp, 00227] => Disk2, Kingston DT 101 II USB, CHS:488,255,63, total sectors: 7847936, bytes per sector = 512
+2020-08-27 15:12:06:387 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-27 15:12:06:449 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-27 15:12:06:449 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-27 15:12:06:449 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2020-08-27 15:13:52:596 => [                                                    main.cpp, 00061] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2020-08-27 15:13:52:596 => [                                                    main.cpp, 00062] => System is server:No
+2020-08-27 15:13:52:596 => [                                                    main.cpp, 00063] => Software is 64 bit:Yes
+2020-08-27 15:13:52:596 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 15:13:52:611 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2020-08-27 15:13:52:611 => [                                                 idriver.cpp, 00636] => Failed to copy file :.
+2020-08-27 15:13:52:736 => [                                          kvolumemanager.cpp, 00227] => Disk0, Vaseky V800/120G SATA, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 15:13:52:877 => [                                          kvolumemanager.cpp, 00248] => Disk0 set alignmentFactor =AlignToMB
+2020-08-27 15:13:52:877 => [                                          kvolumemanager.cpp, 00227] => Disk1, SAMSUNG HD161GJ SATA, CHS:19457,255,63, total sectors: 312581808, bytes per sector = 512
+2020-08-27 15:13:53:314 => [                                          kvolumemanager.cpp, 00227] => Disk2, TO Exter nal USB 3.0 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2020-08-27 15:13:53:564 => [                                          kvolumemanager.cpp, 00248] => Disk2 set alignmentFactor =AlignToMB
+2020-08-27 15:13:53:611 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2020-08-27 15:13:53:611 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2020-08-27 15:13:53:611 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.

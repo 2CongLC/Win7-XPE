@@ -1,0 +1,27 @@
+[08032020-16:54:42][257]Minitool Media Builder
+[08032020-16:54:42][597]Volume C:
+[08032020-16:54:42][597]Volume D:
+[08032020-16:55:00][983]Read disk GEOMETRY, s64TotalSectors = 125821080
+[08032020-16:55:00][996]Read disk GEOMETRY EX, s64Totalbytes = 64424509440
+[08032020-16:55:00][1018]Read disk LENGTH_INFO, s64Totalbytes = 64424509440
+[08032020-16:55:00][318]  Physical sector size is 512 bytes.
+
+[08032020-16:55:00][320]  The number of bytes in a cache line of the device = 0 
+
+[08032020-16:55:00][43] Partition Table Entry Type ee
+[08032020-16:55:00][758]pszVolumeMountPoint = \\?\Volume{ecd88580-0de6-4938-a140-f3de06488773}\, start sector = 673792
+[08032020-16:55:00][758]pszVolumeMountPoint = \\?\Volume{cf74f94b-0f1e-4947-983f-15d2662286c7}\, start sector = 2048
+[08032020-16:55:00][941]Failed to get Windows product type
+[08032020-16:55:00][983]Read disk GEOMETRY, s64TotalSectors = 125821080
+[08032020-16:55:00][996]Read disk GEOMETRY EX, s64Totalbytes = 64424509440
+[08032020-16:55:00][1018]Read disk LENGTH_INFO, s64Totalbytes = 64424509440
+[08032020-16:55:00][318]  Physical sector size is 512 bytes.
+
+[08032020-16:55:00][320]  The number of bytes in a cache line of the device = 0 
+
+[08032020-16:55:00][43] Partition Table Entry Type ee
+[08032020-16:55:00][758]pszVolumeMountPoint = \\?\Volume{ecd88580-0de6-4938-a140-f3de06488773}\, start sector = 673792
+[08032020-16:55:00][758]pszVolumeMountPoint = \\?\Volume{cf74f94b-0f1e-4947-983f-15d2662286c7}\, start sector = 2048
+[08032020-16:55:00][941]Failed to get Windows product type
+[08032020-16:55:05][175]Got ADK.
+[08032020-16:55:08][175]Got ADK.

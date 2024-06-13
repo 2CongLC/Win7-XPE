@@ -1,0 +1,215 @@
+[Main]
+Title=original display drivers
+Type=Plugin
+Author=ChrisR
+Description=(Win7PESE) Add original display drivers to your Windows 8 PE > New Nvidia diplay driver can't be installed without reboot, but the original work
+Credits=JFX
+Version=007
+Download_Level=1
+Level=6
+Selected=False
+Mandatory=False
+NoWarning=False
+Contact=http://TheOven.org
+Date=2019.01.27
+Depend=
+Disable=
+Web1=http://w7pese.cwcodes.net/Projects/Win7PESE/Drivers/display%20drivers.script
+CertifidBy=
+Certification=
+HistoryNotes01=Nvidia diplay driver can't be installed without reboot, but the old one (windows vista) in DriverStore\FileRepository\nv_lh.inf* does work
+History002=Lancelot IniVariables support added
+History005=ChrisR - Code cleanup
+History006=ChrisR - copy dism.exe.mui with en-US fallback - 2013.03.19
+History007=Lancelot - Add Call,HostOSArch // Add DUC Buttons - Date:2019.01.27
+
+[Variables]
+%b32%=%BootSRC%\Windows\System32
+%i64%=%InstallSRC%\Windows\SysWow64
+%FileRepository%=%Source_Sys%\DriverStore\FileRepository
+
+[Interface]
+pBevel1=pBevel1,1,12,11,53,534,161
+pTextLabel1="Start Menu folder",1,1,18,60,105,18,8,Bold
+pTextBox1=,1,0,18,79,168,21,"Computer Management\Drivers"
+pTextLabel5=Install,1,1,18,110,50,18,8,Bold
+pTextLabel6="Start Menu",1,1,190,110,66,18,8,Bold
+pTextLabel7="Name for shortcut",1,1,270,110,107,18,8,Bold
+pTextLabel8="Load at startup",1,1,445,110,91,18,8,Bold
+pCheckBox2=,1,3,30,135,20,18,True
+pTextLabel2="Nvidia display driver",1,1,59,135,135,18,8,Bold
+pCheckBox12=,1,3,210,135,20,18,True
+pTextBox2=,1,0,270,135,170,21,"Install Nvidia display driver"
+pCheckBox22=,1,3,475,135,20,18,True
+pCheckBox3=,1,3,30,160,20,18,True
+pTextLabel3="ATI display driver",1,1,59,160,135,18,8,Bold
+pCheckBox13=,1,3,210,160,20,18,True
+pTextBox3=,1,0,270,160,170,21,"Install ATI display driver"
+pCheckBox23=,1,3,475,160,20,18,True
+pCheckBox4=,1,3,30,185,20,18,True
+pTextLabel4="Intel graphics adapter",1,1,59,185,135,18,8,Bold
+pCheckBox14=,1,3,210,185,20,18,True
+pTextBox4=,1,0,270,185,170,21,"Install Intel graphics adapter"
+pCheckBox24=,1,3,475,185,20,18,True
+pTextLabel9="(Takes times and spaces)",1,1,429,215,130,18,8,Normal
+pRadioGroup1="Integration process",1,14,12,225,223,53,"Show process","Hide process",0
+WebLabel_Plugin="Plugin Page",1,10,338,4,55,18,http://TheOven.org/index.php?board=9
+Button_Download=,1,8,403,21,24,24,DownloadXXX,DoubleJDesignRavenna3dArrowDown0016016.bmp,False,False,_DownloadXXX_,False,"__DOWNLOAD Plugin"
+Button_Upload=,1,8,403,-1,24,24,UploadXXX,BokehliciaCaptivaSoftwareupload0016016.bmp,False,False,_UploadXXX_,False,"__UPLOAD Plugin (Admins Only)"
+Button_CompareEdit=,1,8,426,-1,24,24,CompareEditXXX,AmperossQetto2Move0016016.bmp,False,False,_CompareEditXXX_,False,"__DOWNLOAD and Compare with an Editor"
+
+[Process]
+If,%pCheckBox2%-%pCheckBox3%-%pCheckBox4%,Equal,False-False-False,Echo,"No driver to Install"
+If,%pCheckBox2%-%pCheckBox3%-%pCheckBox4%,Equal,False-False-False,Exit,"No driver to Install"
+//-
+Set,%t%,""
+IniRead,%ProjectDir%\script.project,IniVariables,OSServicePack,%t%
+If,Not,%t%,Equal,"",Set,%OSServicePack%,%t%
+//-
+Call,HostOSArch
+//-
+If,%pRadioGroup1%,Equal,0,Set,%OpenHide%,Open
+If,%pRadioGroup1%,Equal,1,Set,%OpenHide%,Hide
+//-
+Set,%InstNvidia%,%pCheckBox2%
+Set,%InstATI%,%pCheckBox3%
+Set,%InstIntel%,%pCheckBox4%
+If,%OS%%SourceArch%,Equal,Win7x86,Begin
+If,Not,Existfile,%FileRepository%\nv_lh.inf_x86_neutral_bbe628dbdd6fce25\nv_LH.inf,Set,%InstNvidia%,False
+If,%OSServicePack%,Equal,SP0,If,Not,Existfile,%FileRepository%\atiilhag.inf_x86_neutral_7d512c02e72ebd25\atiilhag.inf,Set,%InstATI%,False
+If,%OSServicePack%,Equal,SP1,If,Not,Existfile,%FileRepository%\atiilhag.inf_x86_neutral_1d882551ede2c65b\atiilhag.inf,Set,%InstATI%,False
+If,Not,Existfile,%FileRepository%\igdlh.inf_x86_neutral_2d255f193700d214\igdlh.inf,Set,%InstIntel%,False
+End
+If,%OS%%SourceArch%,Equal,Win7x64,Begin
+If,Not,Existfile,%FileRepository%\nv_lh.inf_amd64_neutral_bc69f20e3115af59\nv_LH.inf,Set,%InstNvidia%,False
+If,%OSServicePack%,Equal,SP0,If,Not,Existfile,%FileRepository%\atiilhag.inf_amd64_neutral_951c1812f542740a\atiilhag.inf,Set,%InstATI%,False
+If,%OSServicePack%,Equal,SP1,If,Not,Existfile,%FileRepository%\atiilhag.inf_amd64_neutral_0a660e899f5038a2\atiilhag.inf,Set,%InstATI%,False
+If,Not,Existfile,%FileRepository%\igdlh.inf_amd64_neutral_54a12b57f547d08e\igdlh.inf,Set,%InstIntel%,False
+End
+If,%OS%%SourceArch%,Equal,Win7x86,Run,%ScriptFile%,Process_Win7x86
+If,%OS%%SourceArch%,Equal,Win7x64,Run,%ScriptFile%,Process_Win7x64
+// Load drivers at startup
+If,ExistFile,%Target_Sys%\autorun.cmd,begin
+TXTDelLine,%Target_Sys%\autorun.cmd,exit
+// autorun Nvidia display driver
+If,%InstNvidia%,Equal,True,If,%pCheckBox22%,Equal,True,Begin
+If,%SourceArch%,Equal,x86,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\nv_lh.inf_x86_neutral_bbe628dbdd6fce25\nv_LH.inf",Append
+If,%SourceArch%,Equal,x64,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\nv_lh.inf_amd64_neutral_bc69f20e3115af59\nv_LH.inf",Append
+End
+// autorun ATI display driver
+If,%InstATI%,Equal,True,If,%pCheckBox23%,Equal,True,Begin
+If,%OSServicePack%%SourceArch%,Equal,SP0x86,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_x86_neutral_7d512c02e72ebd25\atiilhag.inf",Append
+If,%OSServicePack%%SourceArch%,Equal,SP1x86,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_x86_neutral_1d882551ede2c65b\atiilhag.inf",Append
+If,%OSServicePack%%SourceArch%,Equal,SP0x64,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_amd64_neutral_951c1812f542740a\atiilhag.inf",Append
+If,%OSServicePack%%SourceArch%,Equal,SP1x64,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_amd64_neutral_0a660e899f5038a2\atiilhag.inf",Append
+End
+// autorun Intel graphics adapter
+If,%InstIntel%,Equal,True,If,%pCheckBox24%,Equal,True,Begin
+If,%SourceArch%,Equal,x86,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\igdlh.inf_x86_neutral_2d255f193700d214\igdlh.inf",Append
+If,%SourceArch%,Equal,x64,TXTAddLine,%Target_Sys%\autorun.cmd,"drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\igdlh.inf_amd64_neutral_54a12b57f547d08e\igdlh.inf",Append
+End
+TXTAddLine,%Target_Sys%\autorun.cmd,Exit,Append
+End
+// shorcut Nvidia display driver
+If,%InstNvidia%,Equal,True,If,%pCheckBox12%,Equal,True,Begin
+If,%SourceArch%,Equal,x86,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox2%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\nv_lh.inf_x86_neutral_bbe628dbdd6fce25\nv_LH.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+If,%SourceArch%,Equal,x64,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox2%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\nv_lh.inf_amd64_neutral_bc69f20e3115af59\nv_LH.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+End
+// shorcut ATI display driver
+If,%InstATI%,Equal,True,If,%pCheckBox13%,Equal,True,Begin
+If,%OSServicePack%%SourceArch%,Equal,SP0x86,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox3%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_x86_neutral_7d512c02e72ebd25\atiilhag.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2,#$pSystemRoot#$p\system32\hdwwiz.exe
+If,%OSServicePack%%SourceArch%,Equal,SP1x86,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox3%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_x86_neutral_1d882551ede2c65b\atiilhag.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+If,%OSServicePack%%SourceArch%,Equal,SP0x64,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox3%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_amd64_neutral_951c1812f542740a\atiilhag.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+If,%OSServicePack%%SourceArch%,Equal,SP1x64,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox3%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\atiilhag.inf_amd64_neutral_0a660e899f5038a2\atiilhag.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+End
+// shorcut Intel graphics adapter
+If,%InstIntel%,Equal,True,If,%pCheckBox14%,Equal,True,Begin
+If,%SourceArch%,Equal,x86,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox4%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\igdlh.inf_x86_neutral_2d255f193700d214\igdlh.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+If,%SourceArch%,Equal,x64,Add_Shortcut,StartMenu,%pTextBox1%,#$pSystemRoot#$p\system32\cmd.exe,%pTextBox4%,#$pSystemRoot#$p\system32,"/c drvload.exe #$pSystemRoot#$p\System32\DriverStore\FileRepository\igdlh.inf_amd64_neutral_54a12b57f547d08e\igdlh.inf && <nul (set/p z=#) & >nul ping 127.0.0.1 -n 2",#$pSystemRoot#$p\system32\hdwwiz.exe
+End
+
+[Process_Win7x86]
+If,Not,ExistFile,%Target_Sys%\dism\dism.exe,FileCopy,%b32%\dism.exe,%Target_Sys%\dism
+If,Not,ExistFile,%Target_Sys%\dism\%DistLang%\dism.exe.mui,Begin
+If,ExistFile,%b32%\%DistLang%\dism.exe.mui,FileCopy,%b32%\%DistLang%\dism.exe.mui,%Target_Sys%\dism\%DistLang%
+Else,If,ExistFile,%b32%\en-US\dism.exe.mui,FileCopy,%b32%\en-US\dism.exe.mui,%Target_Sys%\dism\en-US
+End
+If,Not,ExistFile,%Target_Sys%\dism\wdscore.dll,FileCopy,%b32%\wdscore.dll,%Target_Sys%\dism
+If,Not,ExistFile,%Target_Sys%\dism\wimgapi.dll,FileCopy,%b32%\wimgapi.dll,%Target_Sys%\dism
+Set,%targetdism%,%Target_Sys%\dism\dism.exe
+Set,%WorkDir%,%Target_Sys%\dism
+//-
+// Add Nvidia display driver
+If,%InstNvidia%,Equal,True,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\nv_lh.inf_x86_neutral_bbe628dbdd6fce25\nv_LH.inf#$q",%WorkDir%
+// Add ATI display driver
+If,%InstATI%,Equal,True,If,%OSServicePack%,Equal,SP0,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\atiilhag.inf_x86_neutral_7d512c02e72ebd25\atiilhag.inf#$q",%WorkDir%
+If,%InstATI%,Equal,True,If,%OSServicePack%,Equal,SP1,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\atiilhag.inf_x86_neutral_1d882551ede2c65b\atiilhag.inf#$q",%WorkDir%
+// Add Intel graphics adapter
+If,%InstIntel%,Equal,True,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\igdlh.inf_x86_neutral_2d255f193700d214\igdlh.inf#$q",%WorkDir%
+
+[Process_Win7x64]
+If,Not,ExistFile,%Target_Sys%\dism\dism.exe,FileCopy,%b32%\dism.exe,%Target_Sys%\dism
+If,Not,ExistFile,%Target_Sys%\dism\%DistLang%\dism.exe.mui,Begin
+If,ExistFile,%b32%\%DistLang%\dism.exe.mui,FileCopy,%b32%\%DistLang%\dism.exe.mui,%Target_Sys%\dism\%DistLang%
+Else,If,ExistFile,%b32%\en-US\dism.exe.mui,FileCopy,%b32%\en-US\dism.exe.mui,%Target_Sys%\dism\en-US
+End
+If,Not,ExistFile,%Target_Sys%\dism\wdscore.dll,FileCopy,%b32%\wdscore.dll,%Target_Sys%\dism
+If,Not,ExistFile,%Target_Sys%\dism\wimgapi.dll,FileCopy,%b32%\wimgapi.dll,%Target_Sys%\dism
+If,Not,ExistFile,%Target_Win%\SysWow64\dism\dism.exe,FileCopy,%i64%\dism.exe,%Target_Win%\SysWow64\dism
+If,Not,ExistFile,%Target_Win%\SysWow64\dism\%DistLang%\dism.exe.mui,Begin
+If,ExistFile,%i64%\%DistLang%\dism.exe.mui,FileCopy,%i64%\%DistLang%\dism.exe.mui,%Target_Win%\SysWow64\dism\%DistLang%
+Else,If,ExistFile,%i64%\en-US\dism.exe.mui,FileCopy,%i64%\en-US\dism.exe.mui,%Target_Win%\SysWow64\dism\en-US
+End
+If,Not,ExistFile,%Target_Win%\SysWow64\dism\wdscore.dll,FileCopy,%i64%\wdscore.dll,%Target_Win%\SysWow64\dism
+If,Not,ExistFile,%Target_Win%\SysWow64\dism\wimgapi.dll,FileCopy,%i64%\wimgapi.dll,%Target_Win%\SysWow64\dism
+If,%HostOSArch%,Equal,x86,Begin
+Set,%targetdism%,%Target_Win%\SysWow64\dism\dism.exe
+Set,%WorkDir%,%Target_Win%\SysWow64\dism
+End
+If,%HostOSArch%,Equal,x64,Begin
+Set,%targetdism%,%Target_Sys%\dism\dism.exe
+Set,%WorkDir%,%Target_Sys%\dism
+End
+//-
+// Add Nvidia display driver
+If,%InstNvidia%,Equal,True,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\nv_lh.inf_amd64_neutral_bc69f20e3115af59\nv_LH.inf#$q",%WorkDir%
+// Add ATI display driver
+If,%InstATI%,Equal,True,If,%OSServicePack%,Equal,SP0,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\atiilhag.inf_amd64_neutral_951c1812f542740a\atiilhag.inf#$q",%WorkDir%
+If,%InstATI%,Equal,True,If,%OSServicePack%,Equal,SP1,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\atiilhag.inf_amd64_neutral_0a660e899f5038a2\atiilhag.inf#$q",%WorkDir%
+// Add Intel graphics adapter
+If,%InstIntel%,Equal,True,ShellExecute,%OpenHide%,%targetdism%,"/image:#$q%TargetDir%#$q /Add-Driver /Driver:#$q%FileRepository%\igdlh.inf_amd64_neutral_54a12b57f547d08e\igdlh.inf#$q",%WorkDir%
+
+[AuthorEncoded]
+display.jpg=2095,2794
+Logo=display.jpg
+
+[EncodedFile-AuthorEncoded-display.jpg]
+lines=0
+0=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
+
+[InterfaceEncoded]
+DoubleJDesignRavenna3dArrowDown0016016.bmp=622,830
+BokehliciaCaptivaSoftwareupload0016016.bmp=676,902
+AmperossQetto2Move0016016.bmp=893,1191
+
+[DownloadXXX]
+Call,DownloadXQ
+
+[UploadXXX]
+Call,UploadXQ
+
+[EncodedFile-InterfaceEncoded-DoubleJDesignRavenna3dArrowDown0016016.bmp]
+lines=0
+0=eJzNk09Ik2Ecxw06BF2KqG5ih1EgYZZu7+v7vnu3d++2MpelRFHgQZEaJLVIXSxrW4Wauf7Nwha2rQ7dOgT9IQT1EkQHi+hSHfRSUZrMcp389PjSoUib3vrB9/I8fD78fr+Hxwi0LS+yyi6ySWSVyGqRZUUl1rnr1/3vBfy3+TTxkabuAzx4dp+lsu/G31LRXIrjaCmeVjtfpj4v2jH+YQwpWIYc3orctgUptJkT/UcWxc/1rLXYqYpKqGcklEglcns5DuF48uLhPx2TUxOYIRWlU8PZraOdU1GjMsop4RO9+DucfM1NzuvIfctR3Wai9hq4rvrREybOCy608xpqrAqlQzhObiOSbv2Ln8nPsDvsZ33dSoob1mE7XIIsetAvCUePG63TiRpXUE47rJ0MvRz8wzH9fZqR0SHSj1LUhn2s8a6gMi7hTm7HddmLftHA2aVT2mJjY3Mx7naJ/I/8vHN0Zc5avKNLw+gP4O7bgeuKD73XQyDqI5QM8ur96IJ7jKUiFi8nDDwDezBuCsf1amsnA4Opgm8Y7jtu8UrSj3lnL+btOjypXRg3dpIdThfkjyWCFu9M1eC7tx/vXeFIC8etWjKL4IPdTRZfFqtAvua1PJ5sPWamnuxIpiD/9Plj4ukIh3oaqGk3KG+0sWHfWhp7DvJm7PWS/9FcZmdnF+R+AlbU23p4nNNyyS9Nykn1ckktzkzPC0osS83LSzROcSwqyi93yS/PMzAwNAMivaTcAoZRMPxAGQuEZmPCLu9y8YwcAxMAHjMRfb+2diEBAAAAAgAAAEQAAAAGAgAAAAAAAAEAAAAAAAAAAAAAAA
+
+[EncodedFile-InterfaceEncoded-BokehliciaCaptivaSoftwareupload0016016.bmp]
+lines=0
+0=eJytU21LWmEYbrAfsP0De4H2pRcqRq+0RllUZkav1O+YIH2JPvUhKKJfUE3aaCNQQR3pYWDTPCpBMKUxSczjZDB0Q8UPV/d9L0tdg33YAxfn5nq5n+c85z4vDa8e18l6TnhGeEJ4SnhUpxP+xa1euQD8V5RKJeTzeeRyOWSzWQHXzLH2t1yxWEQikYDb7cXu7iHW1/exuron4Jo51tjD3tqsw3GC+fn36O39hJ6eh8Eae9hb2SMYjGB42Iu+Pv8/gb2cKb+v2fwGAwOBGvhpTzfhg9S1utn8FuW7MplOMDQUwMhIgHrfY3Mzio2Nz1Uce9jLGc5mMhni/WhuPoROt4/6+td3ODpKwGqNV3HsYS9nOBuLfUFLyzG6ulzEnVXB4/kOpzPzB89eznD24iKKxkar9NPrg7fwYG7OBp/vGxRFw+ysDaOjnjudvZzhbDR6iY4OO/V0YHJSxdiYiq2trygUSri+zuLq6ofU29tx0djT2WmTDGdTqbRw3d1O+jYfMTGhYno6TL1zKC+uTaawaDrdHtrajiWjaWn5BgsLfhgMIZoPL6amQlKvrJzT/gUkkwUsL58Lx2hoOJAnZ8rzbLF4YTSG6d18dAY3nfMUg4MK7RmULGu/oUqea4tFqZi/JGZmwnJGgyEg8zU+fip3otcrdJcRusMQ2tt5vl3iVdVU1T9gt6exuMi+exiNZ2htfYempgNBf78LS0sRsPehf1DTfoq2sxPH2tolnTEm4Jo51tLpX1XZG70Y6I54nNNyys9OzcjJTM5MdE4sKMksSwzOTyspTyxKLS3IyU9MMTAwNAMivaTcAoZRMPxAGQuEtmHCLs9kcFmVgQkAJ9URXc7wHxQBAAAAAgAAAEQAAAA8AgAAAAAAAAEAAAAAAAAAAAAAAA
+
+[CompareEditXXX]
+Call,CompareEdit
+
+[EncodedFile-InterfaceEncoded-AmperossQetto2Move0016016.bmp]
+lines=0
+0=eJxtk1lIVFEYxw16agEVzTRncRtt0cx0NCu0QlsgyyCih7Cgh6KFNgQzSsqnFohUEm3FlqmsVGxxxoxSyYkpTcctsiKXtCZ1mPXee878++5o4YMf/DjfnXN+//sdmLt2s3amj7e0RAzhO8kMH7XPv/KfPcF0NXd7RXRg3ufCoDMD+nkFQ8Z5BYOTDBmDCgYNgXlfCudsq4yZzg3I7ToSfMHmVJQBilLi6pT1X097IZdsroBc87GpblB+zwHVNUBJ50JLBAQUSVhQIkJB/X+KBYQWCd4s1XUgKL/3kOz6HTYpQ4scbq9fLsL/ooAV50ahueKE8oYI1TWBoLVcgLKMKJWf6T1XHILv8WaVothyMlwHqG+KmHVJxKHbFnjs49j5zAnf2xyqexLC74hewm6JdE6AmjLDH1BGseVU2E17VeRjIIBmPFhhASQnnneK0Fy2IYaIKHEi9C6DXxmDWscQeY+yKkREPpLfaa+JuO/Wh5C/9bEd4C7INWyxw/bbCmnUiuZeK9bpHDhfY0FkuQvKSo6ohxKiqoCIu+76qEp3XUQtkFDL0DYm2x4863bjdAdwthfY0QKsMYjgYNDTAQVlqJ9yLHwBaB66DdFPhbol9TRLDUPsS4bWMQ+sYw6kVjuwhmbaXzuOvTVWVJtpPkqpbx/DYp0b0a+AmGrBsKhWMMS+AWL1dDcipZGhctiDHSYRbRY3OSIhYdwlYaI4cppdCGsAFr8Q6uNeiU/iacalrxkSyI1ropxGCXEtDGs/cmxq50hrlvCkx+G9W/F3DzQNDLITpxerEhrFE0ntwLK3DInvGLTvGZI/0BytHInka0wce9tpDo+E0gEPwuncUkJ2ljeJuUlGzNcamS3pA8iVkEJO6ieOVR2EmXpaN3Zz7PviQbyJPMrXfgSSjcy+2mQPlv+DaR3CrrSvQGon0caxmry0Lo508tJ7KIf6BLqHvLeyC0j/RpiFnKnfQEa3sDujj1syR4CMn0AmsZ76DSMTvfe3X8C6Pv4n0yzsme4bzO6yB2f1s6NZ/VyX9YPVZU+yhcjqlx5kD9FetyNkqvMXP3mcf3ick3XMLUgtyi8uDkwtKck38s0vSzUwMDQDIr2k3AKGUTDMgRkLhFZixi4vra37hIEJABkJC8Gkai7oAQAAAAIAAAA3AAAAIgMAAAAAAAABAAAAAAAAAAAAAAA
+

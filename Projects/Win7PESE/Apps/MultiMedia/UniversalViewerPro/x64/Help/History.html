@@ -1,0 +1,378 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Versions history</title>
+  <link href="Main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2>
+  Versions history
+</h2>
+<hr>
+
+<p>
+Version 6.7.6 (sep 2020)
+<ul>
+<li> Add: "Print" and "Print preview" should work again
+<li> Change: Text modes encoding menu: UTF-8 moved to top; UTF-7 removed
+<li> Add: Updated SumatraPDF to 3.2 (better PDF engine, but it doesn't support WinXP)
+<li> Fix: Few errors on Excel files
+</ul>
+
+<p>
+Version 6.7.3 (feb 2020)
+<ul>
+<li> Added: Full-screen state is restored on start
+<li> Fix: Scaling toolbar buttons and Options dialog for High-DPI
+</ul>
+
+<p>
+Version 6.7.2 (may 2019)
+<ul>
+<li> Added: High-DPI support
+<li> Fix: Crash on some .xlsx files
+<li> Fix: Missed localization strings
+<li> Removed leftover NavPanel toolbar icon
+<li> Removed leftover IrfanView options
+</ul>
+
+<p>
+Version 6.7.0 (dec 2018)
+<ul>
+<li> Removed support for outdated multimedia modes: Windows Media Player, MCI, Cubic Player; modern FFMpeg media player is still here
+<li> Removed commands "File - Create link", "File - Send by email", "Options - Edit config file"
+<li> Removed Navigation Panel addon; file commands [Delete, Rename, Copy, Move] and user tools still work
+<li> Removed support for external converter xdoc2txt (program has viewers for Word/Excel, so it was rarely needed)
+<li> Updated components: dcraw, SumatraPDF
+<li> Fix: minor issues with 2 monitors
+</ul>
+
+<p>
+Version 6.5.6 (nov 2013)
+<ul>
+<li> Updated components: dcraw, xdoc2txt, SumatraPDF
+<li> Added: option "Misc -- Date/time format"
+<li> Fix: problem with window resize and MP3
+</ul>
+
+<p>
+Version 6.5.4.2 (may 2013)
+<ul>
+<li>Updated SumatraPDF
+<li>Fix in media DirectDraw mode
+</ul>
+
+<p>
+Version 6.5.4.0 (apr 2013)
+<ul>
+<li>Added: menu item "View -- Load in base viewer" allows to activate Text/Binary/Unicode view modes for Word/Excel/Media files.
+</ul>
+
+<p>
+Version 6.5.3.0 (dec 2012)
+<ul>
+<li>Added: media: option "Use old-style media player" near "Use modern media player".
+<li>Added: media: option for file-extensions list for modern media-player.
+<li>Added: text: option "Interline spacing".
+<li>Added: extension-list editors (buttons "...").
+<li>Fix: deleted ext "iss" from media list.
+</ul>
+
+<p>
+Version 6.5.2.0 (nov 2012)
+<ul>
+<li> Added: HTML pages are detected also by signatures "&lt;html" and "&lt;!doctype".
+<li> Fixed: DOC/DOCX documents should be viewed now on Windows 8.
+</ul>
+
+<p>
+Version 6.5.0.0 (may 2012)
+<ul>
+<li> Added: updated SumatraPDF adds support for CHM (HTML Help) and e-book formats:
+     MOBI EPUB FB2 FBZ FB2Z PDB PRC TCR.
+<li> Changed: new memory manager used (faster DOC/RTF loading).
+<li> Added: Word files: options tab "Word/RTF".
+<li> Added: Word files: command "Zoom - Custom zoom".
+<li> Added: Word files: in the lower-left part of the window 3 buttons added: "Draft/ Web/ Print layout". Use "Web layout" if you need to see too wide table not fitted into window.
+<li> Added: Excel files: multiple cells can be selected (Ctrl+click, Shift+click) and copied to clipbd.
+<li> Fixed: Word files: too slow loading of big docs; PgUp/PgDn keys.
+<li> Fixed: Word/Excel files: opt "Suggest selection as srch text" didn't work.
+<li> Added: options - shortcuts: button "Reset key".
+<li> Changed: @FileList parameter may point to UTF-8 encoded filelist (with BOM).
+     In Total Commander use "@%UL" instead of "@%L" in TC button parameters.
+<li> Added: image mode: keys Space/BkSp work like "File - Next/Previous" for images only.
+<li> Fixed: plugins overlapped status bar.
+<li> Fixed: SRT files were displayed in media mode.
+</ul>
+
+<p>
+Version 6.4.5.0 (mar 2012)
+<ul>
+<li> Registration code changed:
+  <ul>
+  <li> no helper ActiveX are used, UV Pro is portable now
+  <li> no online activation is needed
+  <li> key is stored in file in UV folder
+  <li> no trial period is hard-coded in application, instead the trial message is shown
+  <li> registered users of UV Pro 6.x - <a href="mailto:support@uvviewsoft.com?Subject=Update%20UV%20Pro%20key">contact support</a> to update your keys
+  </ul>
+<p>
+<li> Added: more items in group "Interface -- Items in full-screen mode"
+<li> Added: commands "Help -- Web links -- Forum Eng/Rus"
+<li> Fixed: full-screen switchin flicker
+</ul>
+
+<p>
+Version 6.4.0.2 (feb 2012)
+<ul>
+<li> Fixed: Sumatra PDF updated to 1.9. Printing works.
+<li> Fixed: hanging on viewing many GIFs in a row.
+<li> Changed: image scaling/effects don't work with GIF.
+</ul>
+
+<p>
+Version 6.4.0.0 (feb 2012)
+<ul>
+<li> Added: doc/docx/rtf: "Go to page" command.
+<li> Added: doc/docx/rtf: page layout is visible now like in MS Word.
+<li> Added: doc/docx/rtf: "Zoom" main menu item: Full page/ Fit width/ ...
+<li> Added: media player shortcuts:
+  WheelUp/Down (jump 1 min), Ctrl+Left/Right, Ctrl+WheelUp/Down (jump 5 min).
+<li> Added: cmdline parameter /FS: start in full-screen.
+<li> Added: options dlg "Keys" tab: more shortcuts can be entered (even Del Esc Enter).
+<li> Fixed: window showing delay on opening videos.
+<li> Added: options group "Interface -- Items in full-screen mode".
+<li> Added: option "Multimedia -- Use modern media player".
+<li> Added: media mode: keys Up/Down/Ctrl+M/Space work in old-style media player.
+<li> Added: image mode: keys Space/BkSp work like "File -- Next/Previous".
+<li> Added: option "File types -- Media extensions" (for old-style player).
+<li> Fixed: on opening passworded Excel files, app now terminates more correctly.
+<li> Updated media library.
+</ul>
+
+<p>
+Version 6.3.0.0 (feb 2012)
+<ul>
+<li> Added: Almost all codepages supported. Text mode encodings menu rearranged.
+<li> Added: UTF-8 detection. Opt "File types -- Autodetect -- Detect UTF-8 encoding".
+<li> Changed: NavPanel: "Dock to viewer" default is Off.
+<li> Changed: rename: separate "Ext" field.
+</ul>
+
+<p>
+Version 6.2.7.4 (nov 2011)
+<ul>
+<li> Added: PDF: support for Unicode filenames.
+<li> Fixed: TIFF: correct show for various DPI X/Y.
+<li> Fixed: text: reloading enabled only when selection is finished.
+<li> Added: text: codepage RUSCII.
+</ul>
+
+<p>
+Version 6.2.7 (nov 2011)
+<ul>
+<li> Added: Support for DOC/Word6.0 format as plain text.
+<li> Added: Support for plain text *.doc.
+<li> Added: Text codepages menu rearranged. Indian CPs added.
+<li> Added: Image effect items in RClick menu.
+<li> Added: Proxy settings in Register dlg.
+<li> Removed: Menu items for codepages EBCDIC/ISO/KOI8.
+</ul>
+
+<p>
+Version 6.2.6 (oct 2011)
+<ul>
+<li> Added: WBK (Word backup) support
+<li> Added: DOC/Word6.0 (renamed RTF) support
+<li> Added: option "Auto-rotate image according to EXIF"
+<li> Fixed: opt "Fit only width"
+</ul>
+
+<p>
+Version 6.2.4 (oct 2011)
+<ul>
+<li> Added: start speedup.
+<li> Added: Russian/Ukrainian/Byelorusian license: see Russian help.
+<li> Fixed: text with Form Feed char detection.
+<li> Help: Added FAQ Q2.
+<li> Removed: Syn2 plugin.
+</ul>
+
+<p>
+Version 6.2.3 (aug 2011)
+<ul>
+<li> Added: command "File -- Open folder".
+<li> Fixed: opening .doc with Unicode path.
+<li> Added: options "Audio driver", "Video driver".
+<li> Fixes.
+</ul>
+
+<p>
+Version 6.2.0 (jun 2011)
+<ul>
+<li> Added: images: options "Fit only image width"/"Fit only image height".
+<li> Added: images: support for 14 raw formats.
+<li> Added: images: minimal zoom is 1%.
+<li> Added: statusbar item "File name".
+<li> Added: media: option "Fit window to media" works for audio too.
+<li> Added: media: option "Show time indicator".
+<li> Added: media: rclick menu item "Save current frame".
+<li> Fixed: media: flicker on going to next song.
+<li> Fixed: media: auto-going to next song didn't work.
+<li> Fixed: media: reopening of file with NavPanel call.
+<li> Languages: Armenian, Indonesian.
+</ul>
+
+<p>
+Version 6.1.0 (jun 2011)
+<ul>
+<li> Fixed: crash with media on Win7.
+<li> Added: media player: context menu, Rewind/Forward/Go-to commands.
+<li> Added: image mode: image panel, converting options.
+<li> Fixed: binary view: now shown 1E, 1F as '.'.
+</ul>
+
+<p>
+Version 6.0.0 (jun 2011)
+<ul>
+<li> New Pro version, shareware. <a href="FreePro.html">What's new</a>.
+<li> Changed: NavPanel doesn't need own registration.
+<li> Added: Unicode-named images viewing.
+</ul>
+
+<p>
+Version 5.5.4 (apr 2011)
+<ul>
+<li> Changed: Mode menu separated from View
+<li> Fixed: Office mode in Win7. Now installer work needed for Office mode.
+<li> Updated: unrar.dll, unzip.dll, text converter, Syn plugin
+<li> Options window: checking for assigning of key for 2 actions
+<li> Language added: Slovenian
+</ul>
+
+<p>
+Version 5.5.0 (oct 2010)
+<ul>
+<li> Added: media mode "DirectX". Works if WMP not installed
+<li> Added: if WMP6/WMP9 not installed, error msg appears in red line, not in msgbox. And next mode is tried.
+<li> Added: space pressing in media mode - play/pause.
+<li> Fixes.
+</ul>
+
+<p>
+Version 5.4.8 (oct 2010)
+<ul>
+<li> Added: showing of bmp/jpg/gif/png images with wrong extension.
+<li> Added: option "Allow toolbar in full screen".
+<li> Added: options Misc/ Use custom window height for modes.
+<li> Added: option File types/Ignore list. Warning when such files opened.
+<li> Added: plugin auto-installing from arcs not containing .inf.
+<li> Added: NavPanel: option "Open folders in viewer".
+<li> Added: showing msg for null files.
+<li> Fixed: some jpeg show.
+<li> Fixed: Unicode-named MHT show.
+<li> Fixes.
+</ul>
+
+<p>
+Version 5.3.0 (apr 2010)
+<ul>
+<li> Added: Text encodings: Japanese, CHS, CHT, Korean.
+<li> Added: cmd "File -- Create link".
+<li> Added: option "Text -- Don't confirm 'Find next' options".
+<li> Plugin: Syn 2.1.
+<li> Removed: hidden option SearchNoCfm.
+</ul>
+
+<p>
+Version 5.2.0 (feb 2010)
+<ul>
+<li> NavPanel:
+  <ul>
+  <li> license key stored in file now (not in registry).
+    To get the license file (update is free), email to support address.
+    License is portable now.
+  <li> add: drives bar.
+  <li> add: common folders bar.
+  <li> add: ".Extent" column Details view.
+  </ul>
+<li> Added: option "Reopen last file".
+<li> Changed: "File -- Delete" command requires NavPanel.
+<li> Fixed: WMP with Vista issue.
+<li> FAQ: questions "How to view CHM files", "How to integrate UV to Explorer".
+</ul>
+
+<p>
+Version 5.1.0 (oct 2009)
+<ul>
+<li> Added: TIFF multipage print.
+<li> Added: Syn2 plugin preinstalled (instead of Syn 1.5).
+<li> Added: Hex mode: mouse selection on the digits part.
+</ul>
+
+
+<p>
+Version 5.0.0 (8 oct 2009)
+<ul>
+<li> Added: MS Office native view (view '9'). No issue with Word/Excel new window anymore.
+<li> Added: Text converter (green bar appears at the top) for DOC/DOCX/XLS/XLSX/PPT/WRI/PDF/123 etc documents.
+<li> Added: Syntax color view for source code: PAS/C/CPP/ASM/BAT/REG/INI etc. Syn plugin preinstalled for this.
+<li> Added: Exe/DLL icons view. ICLView plugin preinstalled for this.
+<li> Added: MS Office, OpenOffice types options.
+<li> Changed: most ini keys (some hidden options) renamed, check the settings.
+<li> Changed: NavPanel button Up moved.
+<li> Fixed: NavPanel hang with ODT.
+<li> Added: plugins detect-string syntax "Ext:ext1,ext2,...".
+</ul>
+
+<p>
+Version 4.3.0 (3 sep 2009)
+<ul>
+<li> Added: NavPanel: better docking to viewer, both windows move syncroniously now.
+<li> Added: NavPanel: path combobox.
+<li> Added: NavPanel: options "Show combobox", "Horiz. layout".
+<li> Added: NavPanel: filename edits, drag-drop.
+<li> Added: option "Show confirmation before opening of unknown files".
+<li> Changed: usage of user tools requires NavPanel.
+</ul>
+
+
+<p>
+Version 4.2.2 (23 aug 2009)
+<ul>
+<li> Changed: UV is now free. Pro version's features moved into
+     separate Navigation Panel addon (Nav.exe, shareware).
+<li> Changed: NavPanel cannot be shown in fullscreen mode.
+<li> Added: copying progress for "Copy to folder" command.
+<li> Fixed: saved "Footer" print option.
+<li> Fixed: command "Send by email".
+<li> Fixed: big RTFs loading.
+<li> Fixed: NavPanel: opening of folder .lnk.
+<li> Removed: "ShowStatusbarOnMedia" option.
+</ul>
+
+<p>
+Version 4.0.2 (28 jun 2009)
+<ul>
+<li> Added: context menu item also for folders.
+<li> Added: commandline parameter to open all files in a folder.
+<li> Added: shortcut Ctrl+Shift+Del removes file history.
+<li> Added: US OEM codepage.
+<li> Added: option "Misc -- File sorting". Hidden option "FileSortOrder" removed.
+</ul>
+
+<p>
+Version 4.0.0 (21 Apr 2009)
+<ul>
+<li> Added: Plugins zip auto-install (using Pluginst.inf files).
+<li> Added: Full TIFF support (using VTiff.dll).
+<li> Icons: Tango 22x22.
+<li> Added: Alt+left/right keys - change page (for TIFFs).
+<li> Added: detection of XML files.
+<li> Added: "Step" option for "Gutter / line numbers" dialog.
+<li> Added: Plugins dialog: Del/Ins keys.
+<li> Fixed: workaround for incorrect AmpView work with window pos.
+<li> Fixed: flickering on text reload.
+</ul>
+
+</body></html>

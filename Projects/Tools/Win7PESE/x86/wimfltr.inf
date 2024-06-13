@@ -1,0 +1,46 @@
+[Version]
+Signature="$Windows NT$"
+Class="ActivityMonitor"                 ;Determined by the work this filter driver does
+Provider="ChrisR"
+DriverVer=06/21/2006,6.0.6001.18000
+
+[DestinationDirs]
+DefaultDestDir=12                        ;%windir%\system32\drivers
+WimFltr.DriverFiles=12                        ;%windir%\system32\drivers
+
+[DefaultInstall]
+OptionDesc="WimFltr Driver"
+CopyFiles=WimFltr.DriverFiles
+
+[DefaultInstall.Services]
+AddService="WimFltr",,WimFltr.Service
+
+[DefaultUninstall]
+DelFiles=WimFltr.DriverFiles
+DelReg=WimFltr.DelRegistry
+
+[DefaultUninstall.Services]
+DelService=WimFltr,0x200                      ;Flags not to stop service first
+
+[WimFltr.Service]
+DisplayName="WimFltr"
+Description="Windows Image Mini-Filter Driver"
+ServiceBinary=%12%\wimfltr.sys             ;%windir%\system32\drivers\wimfltr.sys
+Dependencies="FltMgr"                     ;FltMgr
+ServiceType=2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType=3                            ;SERVICE_DEMAND_START
+ErrorControl=1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup="FSFilter Compression"
+AddReg=WimFltr.AddRegistry
+
+[WimFltr.AddRegistry]
+HKLM,"system\currentcontrolset\services\WimFltr","DebugFlags",0x00010001,0x00000001
+HKR,"Instances","DefaultInstance",0x00000000,"WimFltr Instance"
+HKR,"Instances\WimFltr Instance","Altitude",0x00000000,"170500"
+HKR,"Instances\WimFltr Instance","Flags",0x00010001,0x0
+
+[WimFltr.DelRegistry]
+HKLM,"system\currentcontrolset\services\WimFltr","DebugFlags"
+
+[WimFltr.DriverFiles]
+WimFltr.sys

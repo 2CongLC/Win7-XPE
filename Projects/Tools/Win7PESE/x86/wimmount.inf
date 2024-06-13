@@ -1,0 +1,45 @@
+[Version]
+Signature="$Windows NT$"
+Class="ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid={b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}    ;This value is determined by the Class
+Provider="ChrisR"
+DriverVer=08/22/2001,1.0.0.1
+
+[DestinationDirs]
+wimmount.SystemFiles=11            ;%windir%\system32
+wimmount.DriverFiles=12            ;%windir%\system32\drivers
+
+[DefaultInstall]
+OptionDesc="WimMount Driver"
+CopyFiles=wimmount.DriverFiles, wimmount.SystemFiles
+
+[DefaultInstall.Services]
+AddService="wimmount",,wimmount.Service
+
+[DefaultUninstall]
+DelFiles=wimmount.DriverFiles, wimmount.SystemFiles
+
+[DefaultUninstall.Services]
+DelService=wimmount,0x200                      ;Ensure service is stopped before deleting
+
+[wimmount.Service]
+Description="WimMount Driver"
+ServiceBinary=%12%\wimmount.sys            ;%windir%\system32\drivers\
+Dependencies="FltMgr"
+ServiceType=2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType=3                            ;SERVICE_DEMAND_START
+ErrorControl=1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup="FSFilter Activity Monitor"
+AddReg=wimmount.AddRegistry
+
+[wimmount.AddRegistry]
+HKR,,"DebugFlags",0x00010001 ,0x0
+HKR,"Instances","DefaultInstance",0x00000000,"WIMMount"
+HKR,"Instances\WIMMount","Altitude",0x00000000,"180700"
+HKR,"Instances\WIMMount","Flags",0x00010001,0x0
+
+[wimmount.DriverFiles]
+wimmount.sys
+
+[wimmount.SystemFiles]
+wimserv.exe
